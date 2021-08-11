@@ -1,18 +1,15 @@
 # Final Project for Intro to Data Science
 
-## Term YYYY
+## Summer 2021
 
 Team members: 
 
-- Student 1: [Rei Sanchez-Arias](mailto:rsanchezarias@floridapoly.edu)
+- Student 1: Robert Guenther(mailto:rguenther1303@floridapoly.edu)
 
-- Student 2: [Student name](mailto:student2@floridapoly.edu)
+- Student 2: N/A
 
-- Student 3: [Student name](mailto:student3@floridapoly.edu)
-
+- Student 3: N/A
 
 **Summary**
-
-Our project investigates the main characteristics of popular movies in recent years.
-We will be using the data available at: 
-<https://github.com/reisanar/datasets/blob/master/IMDB_movies.csv> 
+I will be using this CSV to see how many songs have certain lyrics, which genre has the most songs to make it on the top 100, and how many top 100 songs have features.
+<https://github.com/reisanar/datasets/blob/master/all_billboard_summer_hits.csv> 
