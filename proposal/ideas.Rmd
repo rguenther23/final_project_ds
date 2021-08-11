@@ -7,12 +7,12 @@ output: html_notebook
 
 ## Section 1. Introduction
 
-Include a brief **introduction or motivation** here
+I will be using this CSV to see how many songs have certain lyrics, which genre has the most songs to make it on the top 100, and how many top 100 songs have features.
 
 ## Section 2. Data Analysis Plan
 
-List any **initial questions** you plan to explore in this project. 
+How many songs have the words "house" and "yes" in them?
+Which genre has the most songs on the top 100?
+How many songs have features?
 
-## Section 3. Data
 
-Include a brief **description of your dataset** (source, available attributes, format, etc.)
