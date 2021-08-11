@@ -2,12 +2,68 @@
 title: "Final Report for Intro to Data Science"
 output: html_notebook
 ---
+Robert Guenther
+Github- https://github.com/rguenther23/final_project_ds
 
-This is where the final project report write-up goes. 
+# Intro
+The Data set I chose was the BillBoard top 100. I got this data from the github repo Professor Sanchez provided us with.
+I used 'ggplot2' and 'tidyverse' to try to find out:
+How many songs were by Elvis, How many have features, and How many are Explicit.
+```{r}
+library(tidyverse)
+```
 
+```{r}
+summer_hits_URL <- "https://raw.githubusercontent.com/reisanar/datasets/master/bbTop100.csv"
+summer_hits <- read.csv(summer_hits_URL)
+summer_hits
+```
 
-Before you submit, make sure everything runs as expected.
+```{r}
+library(ggplot2)
+```
+# Question 1
+How many songs are by Elvis?
+```{r}
+has_Elvis <- summer_hits %>% 
+  mutate(
+      contains_Elvis = case_when(
+      str_detect(artist_name, "Elvis") ~ "yes", 
+      TRUE ~ "No"))
+has_Elvis
+```
 
-You can add sections as you see fit. Make sure you have a section called "Introduction" at the beginning and a section called "Conclusion" at the end. The rest is up to you!
+```{r}
+ggplot(has_Elvis) +
+  geom_col(aes(x = contains_Elvis, y = 1, color = contains_Elvis)) +
+  labs(title = "Songs Containing by Elvis VS the Songs that aren't", x = "Tracks", y = "Number of Songs")
+```
 
-_Make use of your knowledge of Markdown to appropriately typeset this report!_
+```{r}
+has_Elvis %>% 
+  filter(contains_Elvis == "yes")
+```
+# Question 2
+How many songs have features?
+```{r}
+featured <- summer_hits %>%
+  filter(str_detect(artist_name,"featuring"))
+featured
+```
+# Question 3
+How many Explicit songs are on the top 100?
+```{r}
+has_Explicit <- summer_hits %>% 
+  mutate(
+      contains_Explicit = case_when(
+      str_detect(explicit, "true") ~ "yes", 
+      TRUE ~ "No"))
+has_Explicit
+```
+
+```{r}
+ggplot(has_Explicit) +
+  geom_col(aes(x = contains_Explicit, y = 1, color = contains_Explicit)) +
+  labs(title = "Explicit Vs Non-Explicit songs", x = "Tracks", y = "Number of Songs")
+```
+Suprisingly there was only no explicit songs.
