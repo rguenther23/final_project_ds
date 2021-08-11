@@ -11,5 +11,5 @@ Team members:
 - Student 3: N/A
 
 **Summary**
-I will be using this CSV to see how many songs have certain lyrics, which genre has the most songs to make it on the top 100, and how many top 100 songs have features.
-<https://github.com/reisanar/datasets/blob/master/all_billboard_summer_hits.csv> 
+I will be using this CSV to see how many songs have certain lyrics, which genre has the most songs to make it on the top 100, and how many top 100 songs have features in 2017.
+<https://github.com/reisanar/datasets/blob/master/BB_top_100_2017.csv> 
