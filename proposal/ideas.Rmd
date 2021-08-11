@@ -11,7 +11,7 @@ I will be using this CSV to see how many songs have certain lyrics, which genre 
 
 ## Section 2. Data Analysis Plan
 
-How many songs have the words "house" and "yes" in them?
+How many songs are by Elvis?
 Which genre has the most songs on the top 100?
 How many songs have features?
 
